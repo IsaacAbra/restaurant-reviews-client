@@ -15,6 +15,7 @@ const signUpFailure = function (reponse) {
 const signInSuccess = function (response) {
   $('form').trigger('reset')
   $('#message').text('You are in! Feel free to add whatever restaurant reviews you want.')
+  store.user = response.user
 }
 
 const signInFailure = function (response) {
@@ -42,7 +43,7 @@ const signOutFailure = function (response) {
   $('#message').text(`You haven't left. You're still logged in on our website.`)
 }
 
-module.exports =
+module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
@@ -51,3 +52,4 @@ module.exports =
   changePasswordFailure,
   signOutSuccess,
   signOutFailure
+}

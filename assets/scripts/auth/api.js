@@ -1,9 +1,7 @@
 'use strict'
 
-const api = require('./api')
-const ui = require('./ui')
-const getFormFields = require('./../../../lib/get-form-fields')
 const store = require('./../store')
+const config = require('./../config')
 
 const signUp = function (data) {
   return $.ajax({
@@ -58,8 +56,9 @@ const signOut = function (formData) {
   })
 }
 
-module.exports =
+module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut
+}

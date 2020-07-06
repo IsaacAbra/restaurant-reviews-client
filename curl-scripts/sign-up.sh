@@ -1,4 +1,4 @@
-curl "https://gentle-anchorage-68298.herokuapp.com/" \
+curl "http://localhost:4741/sign-up" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \

@@ -1,4 +1,4 @@
-curl "https://gentle-anchorage-68298.herokuapp.com/" \
+curl "http://localhost:4741/change-password" \
   --include \
   --request PATCH \
   --header "Authorization: Token token=${TOKEN}" \

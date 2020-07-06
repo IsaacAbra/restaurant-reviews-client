@@ -3,7 +3,6 @@
 const api = require('./api')
 const ui = require('./ui')
 const getFormFields = require('./../../../lib/get-form-fields')
-const store = require('./../store')
 
 const onSignUp = function (event) {
   event.preventDefault()
@@ -49,8 +48,9 @@ const onSignOut = function (event) {
     .catch(ui.signOutFailure)
 }
 
-module.exports =
+module.exports = {
   onSignUp,
-  onSIgnIn,
+  onSignIn,
   onChangePassword,
   onSignOut
+}

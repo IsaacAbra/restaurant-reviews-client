@@ -1,13 +1,74 @@
 @import '~bootstrap/scss/bootstrap';
 
 * {
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #0000ff;
+  text-align: center;
+  justify-content: center;
 }
 
 header {
-  background-color: #ff0000;
+  background: rgba(0,0,0,.5);
+  width: 600px;
+  border-radius: 10mm;
+  margin: auto;
+}
+
+body {
+  background-color: rgba(0,0,256,.3);
+  background: linear-gradient(#111111, #ffffff);
+  background-image: url("https://s7d2.scene7.com/is/image/TWCNews/050220_pix_restaurant2jpg?wid=1250&hei=703&$wide-bg$");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+h4:nth-child(1) {
+  color: white;
+}
+
+#message {
+  color: white;
+  background: rgba(0,0,0,.5)
+}
+
+button {
+  background-color: rgba(256, 0, 0, .5);
+  border-color: rgba(256, 0, 0, .5);
+  border-radius: 5mm;
+  color: white;
+  border: 0px;
+}
+
+h1 {
+  text-shadow: 3px 4px 7px rgba(256,256,256,.5);
+  color: white;
+}
+
+form {
+  border-radius: 6mm;
+  border: 0px;
+}
+
+h4 {
+  text-shadow: 3px 4px 7px rgba(256,256,256,0.5);
+  color: white;
+}
+ #shadow-me-plz {
+   text-shadow: 3px 4px 7px rgba(256,256,256,.5);
+   color: white;
+ }
+
+input {
+  width: 125px;
+  height: 20px;
+  opacity: 0.7;
+}
+
+#box-me-up {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 900px;
+  margin: auto;
+  border-radius: 10mm;
+}
+
+p {
+  text-shadow: 3px 4px 7px rgba(256,256,256,.5);
 }
