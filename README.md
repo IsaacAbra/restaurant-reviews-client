@@ -1,129 +1,60 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
+#This is my restaurant-reviewing app's front-end
 
-# browser-template
+## My app's front-end
 
-A template for starting front-end projects. Webpack for `require` system, build
-pipeline, and development server. Boostrap and Handlebars.js included. No
-front-end frameworks included.
+Here, one can log their restaurants onto the site and keep up with their personal reviews since we can,
+at times, be somewhat forgetful of our dining experiences. Using this app, we can now have a fun way to
+log-in, sign-out, and write our own reviews as though the aesthetically pleasing site belongs to us too . Therein lies the concept I've wanted others to immerse in and enjoy. (mouth-watering steaks galore!)
 
-## Installation
+## Planning
 
-1. [Download](../../archive/master.zip) this template.
-    - **Do Not Fork And Clone**
-    - Click the "Clone or Download" button and select "Download Zip".
-1. Move to the `wdi/projects` directory, then unzip the template directory with
-    `unzip /Users/<user-name>/Downloads/browser-template-master.zip`.
-1. Rename the template directory from `browser-template-master` to
-    `<project-name>-client`.
-1. Empty [`README.md`](README.md) and fill with your own content.
-1. Replace all instances of `ga-wdi-boston.browser-template` with the name of
-    your project.
-    - You can search for all instances of text in Atom by pressing
-    `commant + shift + f` on Mac or `ctrl + shift + f` on WSL.
-1. Move into the new project and `git init`.
-1. Add all of the files in your project with the command `git add --all`.
-      - **Note: This is the only time you should run this command!**
-1. Commit all of your files with the command `git commit`.
-      - Your commit title should read `Initial commit`.
-1. Install dependencies with `npm install`.
-1. Create a new repository on [github.com](https://github.com),
-    _not GitHub Enterprise_.
-1. Name the new repository with the same name used on Step 3.
-1. Follow the instructions on your new repository's setup page. For details on
-   how to push to Github, refer to the section on Github entitled "…or push an existing
-   repository from the command line." Further documentation can be found [here](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/).
+I was cognizant that this app was built as a full-stack project and I accordingly made a plan to create
+user stories and wireframes, which I consequently used to keep track of my own progress and used each
+(then hypothetical) aspect as a stepping stone to create the product we now see and love.
 
-## Structure
+That was settled, and I worked on the back-end portion by making the schemas/models between my user/restaurants. I've also had to create my curl-scripts for eventual authentication and the restaurant reviews.
 
-### Scripts
+I was subsequent able to begin the front-end development of this project and created the relationships I've
+wanted between the different elements of the site.
+Here's how it went :
 
-Developers should store JavaScript files in [`assets/scripts`](assets/scripts).
-The "manifest" or entry-point is
-[`assets/scripts/app.js`](assets/scripts/app.js). In general, only
-application initialization goes in this file. It's normal for developers to
-start putting all code in this file, but encourage them to break out different
-responsibilities and use the `require` syntax put references where they're
-needed.
+- sign-in
+- sign-up
+- change password
+- view restaurant reviews
+- add restaurant reviews
+- edit restaurant reviews
+- view a specific restaurant review
+- update/edit restaurant information
 
-### Config
+All in all, it was a great experience and I've developed a deeper insight and greater appreciation for the aesthetics I encounter in any pixelated screen.
 
-Developers should set `apiUrls.production` and `apiUrls.development` in
-[`assets/scripts/config.js`](assets/scripts/config.js).  With
-`apiUrls` set, developers may rely on `apiUrl` as the base for API
-URLs.
+Now, here are my user stories
+vvv
+## User stories
 
-### Styles
+- As a user, I'd like to sign-up for a user account
+- As a user, I'd like to sign-in for a user account
+- As a user, I'd like to change my account's password in case I suspect a break-in.
+- As a user, I'd like to sign-out when I feel like my work is done.
+- As a user, I'd like to add tasty restaurants to my list that will stay put after I log out.
+- As a user, I'd like to add an out of 5 rating, a name, location, and a short review for each restaurant (elaboration of the proceeding user story)
+-  As a user, I'd like to then edit/delete the tasty restaurants that I've already then added.
 
-Developers should store styles in [`assets/styles`](assets/styles) and load them
-from [`assets/styles/index.scss`](assets/styles/index.scss). Bootstrap version 3 is
-included in this template.
+## Technologies Used:
 
-### Forms and Using `getFormFields`
+- JSON
+- HTML
+- JavaScript
+- CSS
+- jQuery
+- API
+- cURL
+- Bootstrap
+- Handlebars
+- Sass
 
-Developers should use [getFormFields](get-form-fields.md) to retrieve form data
-to send to an API.
+## Wireframes and relationships
 
-### Deployment
-
-To deploy a browser-template based SPA, run `grunt deploy`.
-
-## Adding Images
-
-To add images to your project, you must store them in the `public` directory.
-To use the image in HTML or CSS, write the path to the image like this:
-
-```html
-<img src="public/cat.jpg">
-```
-or
-```css
-#my-cool-div {
-  background-image: url('public/cat.jpg')
-}
-```
-
-Note that there's no `./` or `/` in front of `public/filename.jpg`.
-
-## Adding Fonts
-
-To add custom fonts to your app, you can either use a CDN like Google Fonts, or
-you can download the fonts and save them in the `public` directory. If you use
-the former method, follow the directions on the website providing the fonts.
-
-For local fonts, put the files in `public`, and then import and use them in a
-`.scss` file like this:
-
-```scss
-@font-face {
-  font-family: 'Nature Beauty';
-  src: url('public/Nature-Beauty.ttf') format('truetype');
-}
-
-.element-with-custom-font {
-  font-family: 'Nature Beauty';
-}
-```
-
-## Tasks
-
-Developers should run these often!
-
-- `grunt nag` or just `grunt`: runs code quality analysis tools on your code
-    and complains
-- `grunt make-standard`: reformats all your code in the JavaScript Standard Style
-- `grunt <server|serve|s>`: generates bundles, watches, and livereloads
-- `grunt build`: place bundled styles and scripts where `index.html` can find
-    them
-- `grunt deploy`: builds and deploys master branch
-
-
-## Additional Resources
-
-- [Modern Javascript Explained for Dinosaurs](https://medium.com/@peterxjang/modern-javascript-explained-for-dinosaurs-f695e9747b70)
-- [Making Sense of Front End Build Tools](https://medium.freecodecamp.org/making-sense-of-front-end-build-tools-3a1b3a87043b)
-
-## [License](LICENSE)
-
-1. All content is licensed under a CC­BY­NC­SA 4.0 license.
-1. All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
+![My relationship diagram](https://i.imgur.com/1GSj82H.png)
+![My wireframes] (https://i.imgur.com/LfZdNiU.png)
