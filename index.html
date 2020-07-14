@@ -17,34 +17,33 @@
       </div>
       <header>
         <section class="signup">
-          <h4>Sign Up</h4>
           <form id="sign-up">
+          <h4>Sign Up</h4>
             <input name="credentials[email]" type="email" placeholder="Email" required>
             <input name="credentials[password]" type="password" placeholder="Password" required>
             <input name="credentials[password_confirmation]" type="password" placeholder="Confirm" required>
             <button type="submit">Create Your Profile!</button>
           </form>
         </section>
-
         <section class="signin">
-          <h4>Sign In</h4>
           <form id="sign-in">
+          <h4>Sign In</h4>
             <input name="credentials[email]" type="email" placeholder="Email" required>
             <input name="credentials[password]" type="password" placeholder="Password" required>
             <button type="submit">Feeling Hungry?</button>
           </form>
         </section>
         <section class="changepw">
-         <h4>Change Password</h4>
-         <form id="change-password">
+         <form id="change-password" class="hide-change-pw-form">
+           <h4>Change Password</h4>
            <input name="passwords[old]" type="password" placeholder="Old Password" required>
            <input name="passwords[new]" type="password" placeholder="New Password" required>
            <button type="submit">Change Password</button>
          </form>
        </section>
       <section>
-        <h4>Sign Out</h4>
-        <form id="sign-out">
+        <form id="sign-out" class="hide-sign-out">
+          <h4>Sign Out</h4>
           <button type="submit">Sign Out</button>
         </form>
       </section>
@@ -52,17 +51,22 @@
     <div>
       <p id="restaurant-message"></p>
     </div>
+      <h1 id="Restaurant-Reviews-are-us">Restaurant Reviews are us</h1>
     <div id="box-me-up">
-        <h1>Restaurant Reviews are us</h1>
           <h4 id="shadow-me-plz">Log in your favorite/least favorite restaurants below</h4>
           <form id="post-restaurant-review" class="restaurant">
-            <input required type="text" placeholder="name" name="profile[name]">
-            <input required type="text" placeholder="cuisine" name="profile[cuisine]">
-            <input required type="text" placeholder="location" name="profile[location]">
-            <input required type="text" placeholder="review" name="profile[review]">
-            <input required type="text" placeholder="rating" name="profile[rating]">
-            <button type="submit">post-restaurant-review</button>
+            <input required type="text" placeholder="name" name="restaurant[name]">
+            <input required type="text" placeholder="cuisine" name="restaurant[cuisine]">
+            <input required type="text" placeholder="location" name="restaurant[location]">
+            <input required type="text" placeholder="review" name="restaurant[review]">
+            <input required type="text" placeholder="rating" name="restaurant[rating]">
+            <input id="red-me-up" type="submit">
           </form>
+    </div>
+    <div class="justify-content-center">
+      <button id="view-restaurant-reviews-btn">View Your Restaurant Reviews</button>
+    </div>
+    <div class="content">
     </div>
   </body>
 </html>

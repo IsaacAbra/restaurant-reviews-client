@@ -6,32 +6,27 @@ const getFormFields = require('./../../../lib/get-form-fields')
 
 const onCreateRestaurant = function (event) {
   event.preventDefault()
-
   const form = event.target
-  const formData = getFormFields(form)
+  const data = getFormFields(form)
 
-  api.createRestaurant(formData)
+  api.createRestaurant(data)
     .then(ui.createRestaurantSuccess)
     .catch(ui.createRestaurantFailure)
 }
 
 const onRestaurantIndex = function (event) {
-  event.preventDefault()
-  const form = event.target
-  const formData = getFormFields(form)
-
-  api.restaurantIndex(formData)
-    .then(ui.onRestaurantIndexSuccess)
-    .catch(ui.onRestaurantIndexFailure)
+  api.restaurantIndex()
+    .then(ui.restaurantIndexSuccess)
+    .catch(ui.restaurantIndexFailure)
 }
 
 const onDeleteRestaurant = function (event) {
   event.preventDefault()
 
   const form = event.target
-  const formData = getFormFields(form)
+  const data = getFormFields(form)
 
-  api.restaurantIndex(formData)
+  api.restaurantIndex(data)
     .then(ui.onDeleteRestaurantIndexSuccess)
     .catch(ui.onDeleteRestaurantFailure)
 }

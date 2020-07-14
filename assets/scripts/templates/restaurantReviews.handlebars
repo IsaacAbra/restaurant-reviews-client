@@ -1,0 +1,16 @@
+{{#each restaurantReviews as |restaurantReview|}}
+<section class="show-pods" data-id="{{restaurantReview._id}}">
+  <div><h3>name:</h3><h5>{{restaurantReview.name}}</h5></div>
+  <div><h3>cuisine:</h3><h5>{{restaurantReview.cuisine}}</h5></div>
+  <div><h3>location:</h3><h5>{{restaurantReview.location}}</h5></div>
+  <div><h3>review:</h3><h5>{{restaurantReview.review}}</h5></div>
+    <div><h3>rating:</h3><h5>{{restaurantReview.rating}}</h5></div>
+  <button type="submit" class="btn btn-danger">Delete</button>
+  <form id="update">
+    <h4>Change Rating</h4>
+    <input required type="text" placeholder="New Rating" name="restaurantReview[rating]">
+    <button type="submit">Change</button>
+  </form>
+</section>
+
+{{/each}}

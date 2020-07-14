@@ -13,11 +13,8 @@ header {
 }
 
 body {
-  background-color: rgba(0,0,256,.3);
-  background: linear-gradient(#111111, #ffffff);
   background-image: url("https://s7d2.scene7.com/is/image/TWCNews/050220_pix_restaurant2jpg?wid=1250&hei=703&$wide-bg$");
-  background-repeat: no-repeat;
-  background-size:cover;
+  background-repeat: repeat;
 }
 
 h4:nth-child(1) {
@@ -37,6 +34,16 @@ button {
   border: 0px;
 }
 
+#red-me-up {
+  background-color: rgba(256, 0, 0, .7);
+  border-color: rgba(256, 0, 0, .5);
+  border-radius: 5mm;
+  color: white;
+  border: 0px;
+  border-bottom: 20px;
+  border: 0px;
+}
+
 h1 {
   text-shadow: 3px 4px 7px rgba(256,256,256,.5);
   color: white;
@@ -51,10 +58,6 @@ h4 {
   text-shadow: 3px 4px 7px rgba(256,256,256,0.5);
   color: white;
 }
- #shadow-me-plz {
-   text-shadow: 3px 4px 7px rgba(256,256,256,.5);
-   color: white;
- }
 
 input {
   width: 125px;
@@ -62,13 +65,53 @@ input {
   opacity: 0.7;
 }
 
-#box-me-up {
+p {
+  text-shadow: 3px 4px 7px rgba(256,256,256,.5);
+}
+
+.hide-change-pw-form {
+  display: none;
+}
+
+.hide-sign-out {
+  display: none;
+}
+
+#shadow-me-plz {
+  text-shadow: 3px 4px 7px rgba(256,256,256,.5);
   background-color: rgba(0, 0, 0, 0.5);
-  width: 900px;
+  display: none;
+  width: 700px;
   margin: auto;
   border-radius: 10mm;
 }
 
-p {
+#Restaurant-Reviews-are-us {
+  background-color: rgba(0, 0, 0, .5);
+  width: 500px;
+  margin: auto;
+  border-radius: 10mm;
+}
+
+.restaurant {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 900px;
+  margin: auto;
+  border-radius: 10mm;
+  display: none;
+}
+
+#view-restaurant-reviews-btn {
+  justify-content: center;
+  background-color: rgba(256, 0, 0, .5);
+  display: none;
+}
+
+.content {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 500px;
+  margin: auto;
+  border-radius: 10mm;
   text-shadow: 3px 4px 7px rgba(256,256,256,.5);
+  color: white;
 }

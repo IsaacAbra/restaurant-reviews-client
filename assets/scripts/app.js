@@ -15,4 +15,5 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#post-restaurant-review').on('submit', authREvents.onCreateRestaurant)
+  $('#view-restaurant-reviews-btn').on('click', authREvents.onRestaurantIndex)
 })

@@ -6,31 +6,20 @@ const config = require('./../config')
 const createRestaurant = function (formData) {
   return $.ajax({
     method: 'POST',
-    url: config.apiUrl + '/create-restaurant',
-    data: {
-      restaurant: {
-        name: formData.restaurants.name,
-        cuisine: formData.restaurants.cuisine,
-        location: formData.restaurants.location,
-        review: formData.restaurants.review,
-        rating: formData.restaurants.rating
-      }
-    }
+    url: config.apiUrl + '/restaurants',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    data: formData
   })
 }
 
-const restaurantIndex = function (formData) {
+const restaurantIndex = function () {
   return $.ajax({
-    method: 'POST',
-    url: config.apiUrl + '/restaurant-index',
-    data: {
-      restaurant: {
-        name: formData.restaurants.name,
-        cuisine: formData.restaurants.cuisine,
-        location: formData.restaurants.location,
-        review: formData.restaurants.review,
-        rating: formData.restaurants.rating
-      }
+    method: 'GET',
+    url: config.apiUrl + '/restaurants',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
     }
   })
 }
@@ -38,15 +27,27 @@ const restaurantIndex = function (formData) {
 const deleteRestaurant = function (formData) {
   return $.ajax({
     method: 'DELETE',
-    url: config.apiUrl + '/delete-restaurant',
+    url: config.apiUrl + '/restaurants',
     headers: {
-      Authorization: 'Token token=' + store.user.token
+      Authorization: 'Bearer ' + store.user.token
     }
+  })
+}
+
+const updateRestaurant = (formData) => {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + '/travel/' + store.restaurantId,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    data: formData
   })
 }
 
 module.exports = {
   createRestaurant,
   restaurantIndex,
-  deleteRestaurant
+  deleteRestaurant,
+  updateRestaurant
 }
